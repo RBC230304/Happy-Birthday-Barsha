@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8b8d0">
+<title>A Little Birthday Magic for Barsha 💗</title>
+<style>
+:root{--pink:#ff6fa9;--rose:#ff9dbd;--plum:#512b59;--cream:#fff6f8;--gold:#ffd778}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,'Times New Roman',serif;color:#fff8fc;background:radial-gradient(ellipse at 50% 0%,#75416f 0,#241737 55%,#140f25 100%);min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#fff9 1px,transparent 1.5px),radial-gradient(#ffb8d9aa 1px,transparent 1.5px);background-size:67px 67px,113px 113px;background-position:0 0,30px 45px;animation:twinkle 5s ease-in-out infinite alternate}
+@keyframes twinkle{to{opacity:.45}}
+.wrap{width:min(1050px,92%);margin:auto;padding:34px 0 55px;position:relative}
+.hero{text-align:center;padding:18px 10px 24px}
+.eyebrow{letter-spacing:.24em;text-transform:uppercase;font:600 11px Arial,sans-serif;color:#ffd6e6}
+h1{font-size:clamp(42px,8vw,82px);line-height:1;margin:12px 0;color:#fff2fa;text-shadow:0 0 22px #ff7ebd88;font-weight:normal}
+h1 span{color:#ffadd0;font-style:italic}
+.subtitle{max-width:620px;margin:14px auto;color:#f8dfea;line-height:1.7;font-size:17px}
+.pill{display:inline-block;border:1px solid #ffc7df88;background:#ffffff10;border-radius:99px;padding:9px 15px;color:#ffe7f1;font:12px Arial,sans-serif;letter-spacing:.06em}
+.stage{position:relative;margin:10px auto 28px;max-width:850px;padding:24px 16px 20px;border:1px solid #ffd3e766;border-radius:28px;background:linear-gradient(145deg,#ffffff14,#ff9ecb0c);box-shadow:0 20px 80px #0004,inset 0 0 35px #ff9dc311;text-align:center}
+.glow{position:absolute;width:260px;height:260px;left:50%;top:40%;transform:translate(-50%,-50%);background:#ff83bd24;filter:blur(50px);border-radius:50%;pointer-events:none}
+.cake-scene{position:relative;height:300px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:14px}
+.cake{position:relative;width:min(340px,75vw);height:170px;transition:transform .7s;cursor:pointer;touch-action:manipulation} .cake:focus-visible{outline:3px solid #ffe0ed;outline-offset:12px;border-radius:20px} .cake:not(.cut):hover{filter:drop-shadow(0 0 12px #ff91c2aa)} .touch-hint{font:12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#ffd6e7;margin-top:-4px}
+.plate{position:absolute;bottom:0;left:-8%;width:116%;height:23px;border-radius:50%;background:linear-gradient(#fff,#e4c9df 55%,#fff);box-shadow:0 8px 15px #0004}
+.cake-body{position:absolute;bottom:14px;left:4%;width:92%;height:115px;border-radius:18px 18px 30px 30px;background:linear-gradient(90deg,#ed8eb6,#ffc5d9 25%,#ffb2cc 75%,#e878a5);box-shadow:inset 0 -13px 0 #e77da8,inset 0 7px 0 #fff5}
+.icing{position:absolute;left:2%;right:2%;bottom:110px;height:35px;background:#fff0f6;border-radius:50% 50% 13px 13px;box-shadow:0 7px 0 #f9a8c8}
+.drip{position:absolute;top:18px;width:18px;height:27px;border-radius:0 0 12px 12px;background:#fff0f6}.drip:nth-child(1){left:12%}.drip:nth-child(2){left:34%;height:19px}.drip:nth-child(3){left:58%;height:30px}.drip:nth-child(4){left:80%;height:21px}
+.decor{position:absolute;bottom:36px;left:12%;right:12%;font-size:24px;letter-spacing:5px;filter:drop-shadow(0 2px 2px #ad507a)}
+.cake-label{position:absolute;bottom:50px;left:50%;transform:translateX(-50%);font-size:21px;color:#7d3458;background:#fff0f6;border:2px solid #ffdbeb;border-radius:50%;width:126px;height:57px;display:grid;place-items:center;box-shadow:0 2px 8px #b4547b55}
+.candle-row{position:absolute;bottom:159px;left:50%;transform:translateX(-50%);display:flex;gap:13px;align-items:flex-end}
+.candle{height:47px;width:10px;border-radius:4px 4px 2px 2px;background:repeating-linear-gradient(135deg,#fff8ef 0 5px,#f68eaf 5px 10px);position:relative;box-shadow:0 0 3px #fff7}
+.flame{position:absolute;width:13px;height:21px;left:-2px;top:-22px;background:radial-gradient(ellipse at 50% 70%,#fff 0 12%,#fff3a8 28%,#ff9e37 65%,transparent 70%);border-radius:50% 50% 45% 45%;filter:drop-shadow(0 0 8px #ffcf63);animation:flicker .6s infinite alternate;transform-origin:bottom}
+@keyframes flicker{to{transform:rotate(7deg) scale(.9)}}
+.cake.cut .cake-body{clip-path:polygon(0 0,100% 0,100% 100%,0 100%);animation:cut .8s forwards}
+.cake.cut{transform:translateX(-5px)}
+.cake.cut:after{content:"";position:absolute;bottom:15px;left:50%;height:116px;width:3px;background:#a95079;transform:rotate(14deg);box-shadow:0 0 0 2px #fff6}
+.cake.cut .cake-label{transform:translateX(-56%) rotate(-4deg)}
+.candle-off .flame{display:none}
+.controls{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:20px auto 4px}
+button{font:600 14px Arial,sans-serif;border:0;border-radius:999px;padding:14px 20px;cursor:pointer;transition:transform .2s,filter .2s}
+button:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.primary{color:#67284a;background:linear-gradient(135deg,#ffe0ed,#ff8fba);box-shadow:0 7px 24px #ff78ad40}
+.secondary{color:#fff0f8;background:#ffffff12;border:1px solid #ffd2e877}
+button:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.status{min-height:28px;color:#ffd5e7;margin:12px 0 0;font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.card{border:1px solid #ffd0e44f;background:#ffffff0d;border-radius:20px;padding:21px 18px;text-align:center}
+.card .icon{font-size:27px}.card h3{font-size:19px;font-weight:normal;margin:10px 0;color:#ffe2ef}.card p{font-size:14px;line-height:1.65;color:#f4d8e7;margin:0}
+.letter{margin:24px auto 0;max-width:760px;border-radius:24px;padding:27px 26px;background:linear-gradient(135deg,#fff0f6,#ffd8e7);color:#63304e;text-align:center;box-shadow:0 18px 45px #0003;display:none}
+.letter.show{display:block;animation:appear .7s ease both}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.letter h2{font-weight:normal;font-size:29px;margin:0 0 13px}
+.letter p{font-size:16px;line-height:1.85;margin:10px auto;max-width:600px}
+.signature{font-style:italic;color:#a13e70;margin-top:17px}
+.song{display:flex;align-items:center;justify-content:center;gap:10px;margin:20px auto 0;color:#f6d8e8;font:13px Arial,sans-serif}
+.song button{padding:10px 15px}
+.confetti{position:fixed;top:-15px;width:9px;height:14px;z-index:9;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(800deg);opacity:.8}}
+footer{text-align:center;margin-top:30px;color:#d6b6ca;font:12px Arial,sans-serif;line-height:1.8}
+@media(max-width:650px){.wrap{padding-top:20px}.stage{padding:16px 10px;border-radius:22px}.cake-scene{height:265px;transform:scale(.9);margin:-5px 0}.cards{grid-template-columns:1fr}.card{padding:18px}.subtitle{font-size:15px}.letter{padding:24px 18px}.controls button{width:100%;max-width:300px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+.photo-memories{margin:30px auto 0;padding:28px 20px;border:1px solid #ffd0e455;border-radius:25px;background:linear-gradient(140deg,#ffffff12,#ff9ecb0a);text-align:center}
+.photo-memories h2{font-weight:normal;font-size:clamp(27px,5vw,40px);margin:12px 0;color:#ffe4f0}
+.memory-intro{color:#f4d8e7;line-height:1.7;max-width:570px;margin:0 auto 22px}
+.memory-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:16px;align-items:center;max-width:850px;margin:auto}
+.memory-photo{margin:0;padding:10px;background:#fff0f6;border-radius:15px;box-shadow:0 10px 28px #0003;transform:rotate(-1deg)}
+.memory-photo:nth-child(2){transform:rotate(1deg)}
+.memory-photo img{display:block;width:100%;height:auto;max-height:680px;min-height:180px;object-fit:contain;border-radius:8px;background:#ead4df}
+.memory-photo figcaption{color:#773653;font-style:italic;padding:12px 6px 5px;font-size:15px}
+@media(max-width:650px){.memory-grid{grid-template-columns:1fr;max-width:420px;gap:20px}.memory-photo{transform:none!important}.memory-photo img{max-height:none}}
+
+
+/* Extra birthday magic */
+.stage{overflow:hidden}
+.stage:after{content:"";position:absolute;inset:-60% -30%;pointer-events:none;background:linear-gradient(110deg,transparent 42%,#fff2 49%,transparent 56%);transform:translateX(-100%);animation:stageShimmer 7s ease-in-out infinite}
+@keyframes stageShimmer{0%,55%{transform:translateX(-100%)}80%,100%{transform:translateX(100%)}}
+.cake-body{transition:filter .4s,transform .6s}
+.cake.cut .cake-body{filter:brightness(1.08)}
+.slice-flight{position:absolute;z-index:8;left:49%;bottom:48px;font-size:48px;filter:drop-shadow(0 7px 5px #0004);animation:feedSlice 2.4s cubic-bezier(.2,.75,.2,1) forwards;pointer-events:none}
+@keyframes feedSlice{0%{transform:translate(0,0) rotate(0) scale(1);opacity:0}12%{opacity:1}50%{transform:translate(95px,-100px) rotate(24deg) scale(1.1)}72%{transform:translate(185px,-80px) rotate(10deg) scale(.95)}88%{transform:translate(215px,-74px) rotate(0) scale(.5);opacity:1}100%{transform:translate(225px,-72px) scale(.05);opacity:0}}
+.cute-face{position:absolute;z-index:7;right:7%;bottom:10px;font-size:60px;opacity:0;transform:scale(.2) rotate(-15deg);filter:drop-shadow(0 5px 9px #0003)}
+.cute-face.show{animation:facePop .55s cubic-bezier(.17,.89,.32,1.49) forwards}
+@keyframes facePop{to{opacity:1;transform:scale(1) rotate(0)}}
+.yum-bubble{position:absolute;z-index:9;right:4%;bottom:90px;background:#fff1f7;color:#9b3d6b;padding:7px 12px;border-radius:16px;font:italic 16px Georgia;opacity:0;transform:translateY(10px)}
+.yum-bubble.show{animation:bubblePop .4s 1.65s forwards}
+@keyframes bubblePop{to{opacity:1;transform:translateY(0)}}
+.photo-memories{display:none;opacity:0;transform:translateY(28px) scale(.96)}
+.photo-memories.reveal{display:block;animation:memorySurprise 1s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes memorySurprise{0%{opacity:0;transform:translateY(45px) scale(.9);filter:blur(8px)}70%{opacity:1;transform:translateY(-5px) scale(1.015);filter:blur(0)}100%{opacity:1;transform:none;filter:none}}
+.memory-photo{transition:transform .35s,box-shadow .35s}
+.memory-photo:hover{transform:translateY(-7px) rotate(0deg) scale(1.02);box-shadow:0 18px 35px #0004}
+.float-heart{position:fixed;z-index:10;bottom:-40px;pointer-events:none;animation:heartRise 4.5s ease-out forwards}
+@keyframes heartRise{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+@media(max-width:650px){.cute-face{right:1%;font-size:48px}.slice-flight{font-size:39px;animation-name:feedSliceMobile}@keyframes feedSliceMobile{0%{transform:translate(0,0) rotate(0) scale(1);opacity:0}12%{opacity:1}50%{transform:translate(35px,-85px) rotate(24deg) scale(1.05)}75%{transform:translate(80px,-75px) rotate(8deg) scale(.8)}100%{transform:translate(105px,-72px) scale(.05);opacity:0}}}
+
+
+/* Photo-targeted cake bite and background birthday music */
+.cake-scene{z-index:1}
+.feeding-portrait{position:absolute;right:18px;top:22px;width:150px;z-index:5;opacity:0;transform:translateX(35px) rotate(5deg) scale(.85);pointer-events:none}
+.feeding-portrait.show{animation:portraitArrive .65s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes portraitArrive{to{opacity:1;transform:translateX(0) rotate(2deg) scale(1)}}
+.portrait-caption{font:italic 12px Georgia;color:#ffe0ed;text-align:center;margin-bottom:7px}
+.portrait-frame{position:relative;background:#fff1f7;padding:6px 6px 9px;border-radius:9px;box-shadow:0 8px 25px #0005;transform:rotate(1deg)}
+.portrait-frame img{display:block;width:100%;height:178px;object-fit:cover;object-position:center 28%;border-radius:5px}
+.mouth-target{position:absolute;left:50%;top:31%;width:20px;height:12px;transform:translate(-50%,-50%);border-radius:50%;opacity:0}
+.mouth-target:after{content:"";position:absolute;inset:-6px;border:2px dashed #ff6fa9;border-radius:50%;animation:targetPulse .65s infinite alternate}
+@keyframes targetPulse{to{transform:scale(1.35);opacity:.35}}
+.slice-flight{display:none!important}
+.slice-travelling{position:fixed;z-index:10000;font-size:40px;line-height:1;pointer-events:none;filter:drop-shadow(0 7px 5px #0005)}
+.feeding-portrait.ate .portrait-frame{animation:portraitNibble .35s ease-in-out 2}
+@keyframes portraitNibble{50%{transform:rotate(-3deg) scale(1.04)}}
+.music-note{font:12px Arial,sans-serif;color:#f6d8e8;text-align:center;margin:10px auto}
+@media(max-width:650px){
+ .feeding-portrait{right:8px;top:8px;width:108px}
+ .portrait-frame img{height:130px}
+ .portrait-caption{font-size:10px}
+ .mouth-target{top:31%;width:16px;height:9px}
+ .slice-travelling{font-size:32px}
+}
+
+
+/* Tiny games unlocked after the cake surprise */
+.mini-games{display:none;margin:28px auto 0;padding:28px 20px;border:1px solid #ffd0e455;border-radius:25px;background:linear-gradient(140deg,#ffffff12,#ff9ecb0a);text-align:center}
+.mini-games.reveal{display:block;animation:memorySurprise 1s cubic-bezier(.16,1,.3,1) forwards}
+.mini-games h2{font-weight:normal;font-size:clamp(27px,5vw,38px);margin:10px 0;color:#ffe4f0}
+.game-intro{max-width:620px;margin:0 auto 20px;line-height:1.7;color:#f4d8e7}
+.game-panel{max-width:720px;margin:18px auto;padding:20px;border:1px solid #ffd0e455;border-radius:20px;background:#ffffff0b}
+.game-panel h3{font-weight:normal;color:#ffe2ef;margin:0 0 8px;font-size:22px}
+.game-panel p{color:#f4d8e7;line-height:1.6}
+.heart-arena{position:relative;height:230px;overflow:hidden;border-radius:16px;border:1px dashed #ffc4dd99;background:radial-gradient(ellipse,#ff9fc41c,transparent 70%)}
+.catch-heart{position:absolute;left:45%;top:40%;font-size:42px;padding:6px;background:transparent;border:0;box-shadow:none;transition:left .2s,top .2s;touch-action:manipulation}
+.catch-heart:hover{transform:scale(1.12)}
+.scoreline{font:600 14px Arial,sans-serif;color:#ffe1ed}
+.wish-options{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.wish-card{flex:1;min-width:130px;max-width:190px;min-height:110px;border:1px solid #ffd0e488;border-radius:16px;background:#ffffff10;color:#fff0f8;padding:16px 12px;line-height:1.5}
+.wish-card.chosen{background:#ffe2ef;color:#71304f;border-color:#fff}
+.game-result{min-height:28px;color:#ffd6e7;font-size:15px;line-height:1.6}
+@media(max-width:650px){.mini-games{padding:22px 12px}.game-panel{padding:14px}.heart-arena{height:205px}.wish-card{min-width:100px}}
+
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="hero">
+  <div class="eyebrow">A little surprise made just for you</div>
+  <h1>Happy Birthday,<br><span>Barsha</span> ♡</h1>
+  <div class="pill">A DAY FULL OF LITTLE MAGIC ✨</div>
+  <p class="subtitle">Today is all about you — your smile, your dreams, and all the lovely things still waiting for you. I hope this little corner of the internet makes you smile.</p>
+</header>
+<section class="stage" aria-label="Interactive birthday cake">
+  <div class="glow"></div>
+  <div class="cake-scene">
+    <div class="cake" id="cake" role="button" tabindex="0" aria-label="Touch the birthday cake to cut it and play the birthday song">
+      <div class="candle-row" id="candles">
+        <div class="candle"><i class="flame"></i></div><div class="candle"><i class="flame"></i></div><div class="candle"><i class="flame"></i></div><div class="candle"><i class="flame"></i></div><div class="candle"><i class="flame"></i></div>
+      </div>
+      <div class="icing"><i class="drip"></i><i class="drip"></i><i class="drip"></i><i class="drip"></i></div>
+      <div class="cake-body"></div>
+      <div class="decor">✿ ✦ ✿ ✦ ✿</div>
+      <div class="cake-label">For Barsha ♡</div>
+      <div class="plate"></div>
+    </div>
+  </div>
+  <div class="feeding-portrait" id="feedingPortrait" aria-hidden="true">
+    <div class="portrait-caption">A little bite for Barsha ♡</div>
+    <div class="portrait-frame">
+      <img src="barsha-photo-1.jpeg" alt="Barsha smiling in her blue outfit">
+      <span class="mouth-target" id="mouthTarget" aria-label="Mouth target"></span>
+    </div>
+  </div>
+  <div class="cute-face" id="cuteFace" aria-hidden="true">😋</div><div class="yum-bubble" id="yumBubble">Yum! ♡</div>
+  <div class="touch-hint">♡ Touch the cake to make the magic happen ♡</div>
+  <div class="controls">
+    <button class="primary" id="blow">🕯️ Blow Out the Candles</button>
+    <button class="secondary" id="cut" disabled>🔪 Cut the Cake</button>
+    <button class="secondary" id="celebrate" disabled>🎉 Celebrate!</button>
+  </div>
+  <p class="status" id="status" aria-live="polite">Touch the cake — the candles will go out, the cake will be cut, and the birthday song will begin! ✨</p>
+  <div class="song"><span>🎵 Birthday music</span><button class="secondary" id="music">▶ Start birthday music</button></div>
+  <p class="music-note" id="musicNote">Touch the cake to start the birthday music in the background. ♡</p>
+</section>
+<section class="cards">
+  <article class="card"><div class="icon">🌷</div><h3>A wish for you</h3><p>May this new year of life bring you peace, confidence, wonderful surprises, and many reasons to smile.</p></article>
+  <article class="card"><div class="icon">🧸</div><h3>A little reminder</h3><p>You deserve kindness, respect, and happiness — not just today, but on all the ordinary days too.</p></article>
+  <article class="card"><div class="icon">🌟</div><h3>Your own bright future</h3><p>Keep being yourself, keep dreaming big, and take life at your own beautiful pace.</p></article>
+</section>
+
+<section class="photo-memories" id="memories" aria-hidden="true">
+  <div class="eyebrow">Little moments, lovely memories</div>
+  <h2>Barsha, in beautiful moments ♡</h2>
+  <p class="memory-intro">A little photo corner just for you — because every picture holds its own kind of sunshine.</p>
+  <div class="memory-grid">
+    <figure class="memory-photo"><img src="barsha-photo-1.jpeg" alt="Barsha in a blue traditional outfit" loading="eager"><figcaption>Simply lovely ✨</figcaption></figure>
+    <figure class="memory-photo memory-tall"><img src="barsha-photo-2.jpeg" alt="A collage of Barsha's special moments" loading="eager"><figcaption>Little moments, lasting memories ♡</figcaption></figure>
+  </div>
+</section>
+
+
+<section class="mini-games" id="miniGames" aria-hidden="true">
+  <div class="eyebrow">Unlocked: play time!</div>
+  <h2>Little birthday games for you ♡</h2>
+  <p class="game-intro">The cake was just the beginning, Barsha! Here are two tiny games made to add a little extra fun to your day. ✨</p>
+
+  <div class="game-panel">
+    <h3>💗 Catch 5 floating hearts</h3>
+    <p>Tap the heart as it hops around the little garden. Catch five to win a birthday surprise!</p>
+    <div class="scoreline" id="heartScore">Hearts caught: 0 / 5</div>
+    <div class="heart-arena" id="heartArena">
+      <button class="catch-heart" id="catchHeart" aria-label="Catch the floating heart" title="Tap me!">💗</button>
+    </div>
+    <p class="game-result" id="heartResult" aria-live="polite">Ready when you are! Press the heart to start.</p>
+    <button class="primary" id="resetHearts">↻ Play again</button>
+  </div>
+
+  <div class="game-panel">
+    <h3>🌷 Pick a little birthday wish</h3>
+    <p>Choose whichever card feels right — each one has a different wish for your year ahead.</p>
+    <div class="wish-options">
+      <button class="wish-card" data-wish="May your days be full of peaceful moments, warm people, and reasons to smile.">🌙<br>A peaceful year</button>
+      <button class="wish-card" data-wish="May your courage grow, your dreams feel closer, and new doors open for you.">🌟<br>Big dreams</button>
+      <button class="wish-card" data-wish="May little unexpected joys find you often, even on ordinary days.">🦋<br>Lovely surprises</button>
+    </div>
+    <p class="game-result" id="wishResult" aria-live="polite">Pick a card to reveal your wish. 💌</p>
+  </div>
+</section>
+
+<section class="letter" id="letter">
+  <h2>A little message for you, Barsha 💌</h2>
+  <p>Happy Birthday, Barsha. I hope life is gentle with you and brings you more happiness than you expect. I'm grateful that I get to know you, and I wanted to give you something small that might brighten your day.</p>
+  <p>You don't have to reply in any particular way, and there's nothing you need to decide. I simply wish you a lovely birthday, a peaceful heart, and a year filled with good things. Keep smiling in whatever way feels right for you. 💗</p>
+  <p class="signature">With warm wishes, and lots of respect ♡</p>
+</section>
+<footer>Made with care for Barsha · No expectations, just birthday wishes 💗<br>May your next chapter be full of light.</footer>
+</main>
+<script>
+const cake=document.getElementById('cake'), blow=document.getElementById('blow'), cut=document.getElementById('cut'), celebrate=document.getElementById('celebrate'), status=document.getElementById('status'), letter=document.getElementById('letter');
+let blown=false, cutDone=false, tuneOn=false, audioCtx=null, tuneTimer=null;
+function confetti(count=110){const colors=['#ff78ad','#ffd778','#fff1f7','#bca4ff','#ff9f76','#a8f0d1'];for(let i=0;i<count;i++){const e=document.createElement('i');e.className='confetti';e.style.left=Math.random()*100+'vw';e.style.background=colors[Math.floor(Math.random()*colors.length)];e.style.borderRadius=Math.random()>.5?'50%':'2px';e.style.animationDuration=(2.4+Math.random()*3)+'s';e.style.animationDelay=(Math.random()*.7)+'s';e.style.transform='rotate('+Math.random()*360+'deg)';document.body.appendChild(e);setTimeout(()=>e.remove(),6500)}}
+
+function floatHearts(){
+  const hearts=['♡','💗','✨','💕','✦'];
+  for(let i=0;i<24;i++){
+    const e=document.createElement('span');e.className='float-heart';
+    e.textContent=hearts[Math.floor(Math.random()*hearts.length)];
+    e.style.left=(Math.random()*100)+'vw';e.style.fontSize=(16+Math.random()*25)+'px';
+    e.style.animationDelay=(Math.random()*1.4)+'s';document.body.appendChild(e);
+    setTimeout(()=>e.remove(),6000);
+  }
+}
+function revealMemories(){
+  const memories=document.getElementById('memories');
+  memories.setAttribute('aria-hidden','false');
+  memories.classList.add('reveal');
+  // Explicit visibility fallback so the gallery still appears if an animation is interrupted.
+  memories.style.display='block';
+  memories.style.visibility='visible';
+  memories.style.opacity='1';
+  memories.style.transform='none';
+  const games=document.getElementById('miniGames');
+  games.setAttribute('aria-hidden','false');
+  games.classList.add('reveal');
+  games.style.display='block';
+  games.style.visibility='visible';
+  games.style.opacity='1';
+  games.style.transform='none';
+  status.textContent='Your photos and little birthday games are ready, Barsha! 💗';
+  confetti(100);floatHearts();
+  setTimeout(()=>memories.scrollIntoView({behavior:'smooth',block:'start'}),500);
+}
+
+
+let songStarted=false, musicCtx=null, musicNodes=[], musicLoop=null, musicPlaying=false;
+function startBirthdaySong(){
+  if(musicPlaying)return;
+  try{
+    const AC=window.AudioContext||window.webkitAudioContext;
+    if(!AC){
+      document.getElementById('musicNote').textContent='This browser cannot play background music.';
+      return;
+    }
+    musicCtx=musicCtx||new AC();
+    if(musicCtx.state==='suspended') musicCtx.resume();
+    musicPlaying=true;
+    songStarted=true;
+    document.getElementById('music').textContent='Ⅱ Pause birthday music';
+    document.getElementById('musicNote').textContent='♪ Happy Birthday, Barsha — music is playing in the background ♡';
+    // Familiar Happy Birthday melody rendered locally with a soft bell-like tone.
+    const melody=[
+      [392,.32],[392,.32],[440,.64],[392,.64],[523,.64],[494,1.0],
+      [392,.32],[392,.32],[440,.64],[392,.64],[587,.64],[523,1.0],
+      [392,.32],[392,.32],[784,.64],[659,.64],[523,.64],[494,.64],[440,1.0],
+      [698,.32],[698,.32],[659,.64],[523,.64],[587,.64],[523,1.0]
+    ];
+    const beat=.34;
+    function playPhrase(){
+      if(!musicPlaying||!musicCtx)return;
+      let t=musicCtx.currentTime+.08;
+      melody.forEach(([freq,dur],i)=>{
+        const osc=musicCtx.createOscillator();
+        const gain=musicCtx.createGain();
+        const shimmer=musicCtx.createOscillator();
+        const shimmerGain=musicCtx.createGain();
+        osc.type='sine'; osc.frequency.setValueAtTime(freq,t);
+        shimmer.type='sine'; shimmer.frequency.setValueAtTime(freq*2.01,t);
+        gain.gain.setValueAtTime(.0001,t);
+        gain.gain.exponentialRampToValueAtTime(.075,t+.035);
+        gain.gain.setValueAtTime(.055,t+dur*.65);
+        gain.gain.exponentialRampToValueAtTime(.0001,t+dur);
+        shimmerGain.gain.setValueAtTime(.0001,t);
+        shimmerGain.gain.exponentialRampToValueAtTime(.018,t+.04);
+        shimmerGain.gain.exponentialRampToValueAtTime(.0001,t+dur*.75);
+        osc.connect(gain); gain.connect(musicCtx.destination);
+        shimmer.connect(shimmerGain); shimmerGain.connect(musicCtx.destination);
+        osc.start(t); osc.stop(t+dur+.03); shimmer.start(t); shimmer.stop(t+dur+.03);
+        musicNodes.push(osc,shimmer);
+        t += beat;
+      });
+      musicLoop=setTimeout(()=>{musicNodes=[];playPhrase()}, melody.length*beat*1000+1300);
+    }
+    playPhrase();
+  }catch(e){
+    document.getElementById('musicNote').textContent='Please tap Start birthday music to enable sound.';
+  }
+}
+function stopBirthdaySong(){
+  musicPlaying=false;
+  if(musicLoop)clearTimeout(musicLoop);
+  musicNodes.forEach(n=>{try{n.stop()}catch(e){}});
+  musicNodes=[];
+  document.getElementById('music').textContent='▶ Resume birthday music';
+  document.getElementById('musicNote').textContent='Birthday music paused.';
+}
+
+function animateSliceToMouth(){
+  const cakeEl=document.getElementById('cake');
+  const target=document.getElementById('mouthTarget');
+  const portrait=document.getElementById('feedingPortrait');
+  const yum=document.getElementById('yumBubble');
+  const face=document.getElementById('cuteFace');
+  if(!cakeEl || !target || !portrait) return;
+
+  const cakeRect=cakeEl.getBoundingClientRect();
+  const targetRect=target.getBoundingClientRect();
+  const slice=document.createElement('span');
+  slice.className='slice-travelling';
+  slice.textContent='🍰';
+  document.body.appendChild(slice);
+
+  const startX=cakeRect.left+cakeRect.width*0.58;
+  const startY=cakeRect.top+cakeRect.height*0.30;
+  const endX=targetRect.left+targetRect.width/2;
+  const endY=targetRect.top+targetRect.height/2;
+  const dx=endX-startX, dy=endY-startY;
+  slice.style.left=startX+'px';
+  slice.style.top=startY+'px';
+  slice.style.transition='none';
+  slice.style.transform='translate(-50%,-50%) scale(1) rotate(0deg)';
+  slice.style.opacity='1';
+
+  // Force the starting position to be painted before moving the slice.
+  slice.getBoundingClientRect();
+  requestAnimationFrame(()=>{
+    slice.style.transition='left 1.45s cubic-bezier(.22,.75,.25,1), top 1.45s cubic-bezier(.22,.75,.25,1), transform 1.45s ease-in, opacity 1.45s ease-in';
+    slice.style.left=endX+'px';
+    slice.style.top=endY+'px';
+    slice.style.transform='translate(-50%,-50%) scale(.22) rotate(18deg)';
+    slice.style.opacity='0.15';
+  });
+  setTimeout(()=>{
+    slice.remove();
+    portrait.classList.add('ate');
+    face.classList.add('show');
+    yum.classList.add('show');
+    confetti(35);
+  },1500);
+}
+
+function startBirthdayMagic(){
+  if(cutDone)return;
+  if(!blown){blown=true;document.body.classList.add('candle-off');blow.disabled=true;status.textContent='Make a wish, Barsha… ✨';confetti(40);}
+  startBirthdaySong();
+  document.getElementById('feedingPortrait').classList.add('show');
+  document.getElementById('mouthTarget').style.opacity='1';
+  setTimeout(()=>{
+    if(cutDone)return;
+    cutDone=true;cake.classList.add('cut');cut.disabled=true;celebrate.disabled=true;
+    status.textContent='The cake is cut! A tiny slice is flying to Barsha’s mouth… 🍰';
+    confetti(140);floatHearts();letter.classList.add('show');
+    setTimeout(animateSliceToMouth,250);
+    setTimeout(revealMemories,3200);
+  },650);
+}
+// Keep both provided photos loaded and report a missing file clearly.
+document.querySelectorAll('#memories img').forEach(img=>{
+  img.addEventListener('error',()=>{img.alt='Photo file not found: '+img.getAttribute('src')+' — keep the photo files beside index.html';});
+});
+cake.addEventListener('click',startBirthdayMagic);
+cake.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();startBirthdayMagic();}});
+blow.addEventListener('click',()=>{if(!blown){blown=true;document.body.classList.add('candle-off');blow.disabled=true;cut.disabled=false;status.textContent='Wish made! ✨ Touch the cake for the full surprise!';}});
+cut.addEventListener('click',startBirthdayMagic);
+celebrate.addEventListener('click',()=>{confetti(150);letter.classList.add('show');status.textContent='Happy Birthday, Barsha! 🎉';});
+
+// Game 1: tap a heart that hops to a new position; win after five catches.
+let caughtHearts=0;
+const heartArena=document.getElementById('heartArena');
+const catchHeart=document.getElementById('catchHeart');
+function moveCatchHeart(){
+  const maxX=Math.max(0,heartArena.clientWidth-catchHeart.offsetWidth-8);
+  const maxY=Math.max(0,heartArena.clientHeight-catchHeart.offsetHeight-8);
+  catchHeart.style.left=(Math.random()*maxX)+'px';
+  catchHeart.style.top=(Math.random()*maxY)+'px';
+}
+catchHeart.addEventListener('click',()=>{
+  if(caughtHearts>=5)return;
+  caughtHearts++;
+  document.getElementById('heartScore').textContent='Hearts caught: '+caughtHearts+' / 5';
+  if(caughtHearts>=5){
+    catchHeart.textContent='🎁';
+    catchHeart.style.left='45%';catchHeart.style.top='35%';
+    document.getElementById('heartResult').textContent='You did it, Barsha! Your birthday superpower is officially adorable. 🎉💗';
+    confetti(55);
+  }else{
+    catchHeart.textContent=['💗','💕','💖','💘'][Math.floor(Math.random()*4)];
+    document.getElementById('heartResult').textContent=['Lovely catch! ✨','You’re quick! 💕','One more little bit of magic! 🌷'][Math.floor(Math.random()*3)];
+    moveCatchHeart();
+  }
+});
+document.getElementById('resetHearts').addEventListener('click',()=>{
+  caughtHearts=0;catchHeart.textContent='💗';catchHeart.style.left='45%';catchHeart.style.top='40%';
+  document.getElementById('heartScore').textContent='Hearts caught: 0 / 5';
+  document.getElementById('heartResult').textContent='Ready when you are! Press the heart to start.';
+});
+// Game 2: reveal a kind birthday wish from the chosen card.
+document.querySelectorAll('.wish-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    document.querySelectorAll('.wish-card').forEach(c=>c.classList.remove('chosen'));
+    card.classList.add('chosen');
+    document.getElementById('wishResult').textContent=card.dataset.wish+' ♡';
+    floatHearts();
+  });
+});
+
+document.getElementById('music').addEventListener('click',()=>musicPlaying?stopBirthdaySong():startBirthdaySong());
+</script>
+</body>
+</html>
